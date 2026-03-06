@@ -1,0 +1,394 @@
+/* animations*/
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}   
+
+/* Colors*/
+:root {
+    --backround-color: #40513B;
+    /* lighter green*/
+    --accent-color: #243120;
+    /* dark green*/
+    --alert-color: #E5D9B6;
+    /* bone color*/
+
+}
+
+/* fonts used */
+
+
+h1 {
+    font-family: "Outfit", sans-serif;
+}
+
+h2 {
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Outfit", sans-serif;
+}
+
+
+p {
+    font-family: "Outfit", sans-serif;
+}
+
+a,
+a:visited {
+    font-family: "outfit", sans-serif;
+    font-style: normal;
+    color:#243120;
+    background-color: var(--alert-color);
+    padding: 6px 6px 6px 6px;
+    border: 2px #243120;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 2px 4px 5px 2px black;
+}
+
+a:hover {
+    font-style: normal;
+    color: var(--accent-color);
+    background-color: whitesmoke;
+}
+
+a:active {
+    font-style: normal;
+    color:#243120;
+    background-color: var(--accent-color);
+    padding: 6px 6px 6px 6px;
+    border: 2px #243120;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+/* header styling */
+
+header {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    border-radius: 25px;
+    background: var(--backround-color);
+    justify-content: space-evenly;
+    margin-bottom: 1%;
+}
+
+/* website name styling */
+
+.websiteName {
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+    text-align: center;
+    animation: animate__heartBeat 3s ease-out;
+}
+
+
+/* logo styling */
+
+.logo {
+    text-align: center;
+    padding-top: 2%;
+    margin-bottom: auto;
+}
+
+.logoArt {
+    margin: auto;
+    max-width: 30%;
+    min-width: 25%;
+    background-color: lightgray;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px white;
+}
+/* Animation of logo*/
+
+.Spinlogo:active {
+    animation: spin 0.75s infinite linear;
+}
+
+
+/* menu styling */
+
+.navbar {
+    background-color: --accent-color;
+    padding: 3%;
+}
+
+
+#main-menu {
+    margin-bottom: 25px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
+
+
+.button {
+    font-family: "Outfit", sans-serif;
+    background-color:var(--alert-color);
+    box-shadow: 2px 4px 5px 2px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    display: grid;
+
+    justify-content: center;
+    text-align: center;
+    margin: 1%;
+}
+
+
+/* body styling */
+
+body {
+    background-color: var(--accent-color);
+    color: var(--alert-color);
+}
+
+/* main styling */
+
+main {
+    max-width: 100%;
+    background-color: var(--backround-color);
+    background-size: auto;
+    border-radius: 25px;
+    padding-bottom: 16px;
+}
+
+
+/* styling call to action */
+
+.hero {
+    font-style: italic;
+    background-color: transparent;
+    text-decoration: double;
+    text-align: center;
+}
+
+.heroImage {
+    margin: auto;
+    max-width: 99%;
+    display: flex;
+    filter: sepia();
+    border-radius: 25px;
+}
+
+/* skill */
+
+.SkillContainer {
+    max-width: 100%;
+}
+
+.SkillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(265px, 100%), 1fr));
+    grid-gap: 4px;
+    margin: auto;
+    padding: 2%;
+    
+}
+
+.SkillPairs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #243120;
+    border: 2px, solid black;
+    border-radius: 25px;
+    padding: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 100%;
+    max-height: 80px;
+    justify-content: center;
+
+}
+
+/* skill icon zoom */
+
+.SkillPairs:hover {
+    animation: zoom 0.5s;
+}
+
+.skill{
+    font-size: 24px;
+}
+
+.SkillImage {
+    max-width: 25%;
+    max-height: 90%;
+    filter: grayscale(100%) drop-shadow(0px 2px 1px white);
+}
+
+/* Projects formatting */
+
+
+.projects {
+    gap: 0.5%;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 0%;
+    justify-content: space-evenly;
+}
+
+.projectScale {
+    max-width: 100%;
+    border-radius: 10px;
+}
+ 
+/* project zoom animation*/
+
+.HoverZoom:hover {
+    animation: zoom 2s;
+}
+
+
+/* contact */
+
+.contact {
+    text-align: center;
+    margin: auto;
+}
+
+.emailLink {
+    margin-top: 1px;
+    display: inline-flex;
+    font-family: "Outfit", sans-serif;
+    background-color:var(--alert-color);
+    color:#40513B;
+    border: 2px;
+    border-color: #243120;
+    border-radius: 25px;
+    box-shadow: 2px 4px 5px 2px black;
+    padding: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* resume */
+
+.resume {
+    text-align: center;
+}
+
+.resumeImage {
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 2%;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding-top: 2%;
+    background-color: var(--backround-color);
+    margin-top: 1%;
+    border-radius: 25px;
+    max-width: 100%;
+    background-size: auto;
+    padding-bottom: 10px;
+}
+
+.bottomLogo {
+    max-width: 25%;
+    background-color: lightgray;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px white;
+    margin-bottom: 1%;
+}
+
+
+@media (max-width: 1024px) {
+
+    header {
+        background-color: darkslategray;
+    }
+
+    body {
+        background-color: lightslategray;
+        color: var(--alert-color)
+    }
+
+    main {
+        background-color: darkslategrey;
+    }
+
+    footer {
+        background-color: darkslategrey;
+    }
+
+    .SkillPairs {
+        background-color: lightslategrey;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-color: lightgoldenrodyellow;
+        color: var(--accent-color);
+    }
+
+    header {
+        background-color: darkgoldenrod;
+    }
+
+    main {
+        background-color: darkgoldenrod;
+    }
+
+    footer {
+        background-color: darkgoldenrod;
+    }
+
+    .SkillPairs {
+        background-color: lightgoldenrodyellow;
+    }
+
+    #main-menu {
+    margin-bottom: 25px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
+
+    .menu {
+    list-style-type: none;
+    flex-direction:column;
+    display: inline-flex;
+    padding-right: 4%;
+    gap: 20px;
+    padding-right: 7%;
+    }
+
+
+}
