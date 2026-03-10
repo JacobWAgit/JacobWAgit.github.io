@@ -23,7 +23,7 @@
         <div class="logoAndName">
             <div class="Spinlogo">
                 <div class="logo">
-                    <img class="logoArt" src=logo.png alt="Logo place holder">
+                    <img class="logoArt" draggable="false" src=logo.png alt="Logo place holder">
                 </div>
             </div>
 
@@ -165,7 +165,9 @@
 
         <p>Thank you for taking the time to visit my portfolio page!</p>
     </footer>
-
+    <javascript>
+        window.ondragstart = function() {return false; }
+    </javascript>
 </body>
 
 </html>

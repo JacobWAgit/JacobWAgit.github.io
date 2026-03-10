@@ -107,6 +107,8 @@ header {
     text-align: center;
     padding-top: 2%;
     margin-bottom: auto;
+    pointer-events: none;
+    user-select: none;
 }
 
 .logoArt {
@@ -161,7 +163,7 @@ header {
 
 body {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1200px;
     background-color: var(--accent-color);
     color: var(--alert-color);
 }
@@ -329,6 +331,8 @@ footer {
     border-radius: 50%;
     box-shadow: 0 0 5px 5px white;
     margin-bottom: 1%;
+    pointer-events: none;
+    user-select: none;
 }
 
 
@@ -378,6 +382,8 @@ footer {
 
     .SkillPairs {
         background-color: lightgoldenrodyellow;
+        max-width: 500px;
+        
     }
 
     #main-menu {
