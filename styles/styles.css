@@ -160,6 +160,8 @@ header {
 /* body styling */
 
 body {
+    margin: 0 auto;
+    max-width: 1440px;
     background-color: var(--accent-color);
     color: var(--alert-color);
 }
@@ -218,16 +220,21 @@ main {
     padding: 7px;
     margin-left: 5px;
     margin-right: 5px;
-    max-width: 100%;
+    max-width: 250px;
     max-height: 80px;
     justify-content: center;
+    
 
 }
 
 /* skill icon zoom */
 
 .SkillPairs:hover {
-    animation: zoom 0.5s;
+    transition: 2s;
+    transform: scale(1.2);
+    
+
+
 }
 
 .skill{
@@ -263,7 +270,8 @@ main {
 /* project zoom animation*/
 
 .HoverZoom:hover {
-    animation: zoom 2s;
+    transition: 2s;
+    transform: scale(1.2);
 }
 
 
