@@ -163,7 +163,7 @@ header {
 
 body {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px;
     background-color: var(--accent-color);
     color: var(--alert-color);
 }
