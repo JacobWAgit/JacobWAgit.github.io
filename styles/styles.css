@@ -1,3 +1,108 @@
+:root {
+  --crt-red: rgb(218, 49, 49);
+  --crt-green: rgb(112, 159, 115);
+  --crt-blue: rgb(40, 129, 206);
+}
+/* Global */
+html {
+  font-size: 1.5rem;
+  font-family: "Courier New", monospace;
+  min-height: 100%;
+}
+main {
+  height: 100vh;
+  height: 100dvh;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pink {
+  color: pink;
+}
+.yellow {
+  color: yellow;
+}
+.lightblue {
+  color: lightblue;
+}
+.code {
+  color: attr(data-color);
+}
+.wrapper {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.code {
+  animation: typewriter 1s steps(14) 1s 1 normal both;
+  line-height: 1;
+  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.cursor {
+  display: inline-block;
+  animation: blinkTextCursor 500ms infinite normal;
+}
+
+/* Animation */
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.crt {
+  background-color: rgb(25, 25, 30);
+  text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5),
+    -1px -1px rgba(0, 255, 255, 0.4);
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    transform: translateZ(0);
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    background: repeating-linear-gradient(
+      var(--crt-red) 0px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 4px
+    );
+  }
+  &:after {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--crt-red) 1px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 3px
+    );
+  }
+}
+
+
 /* animations*/
 
 @keyframes spin {
@@ -79,6 +184,21 @@ a:active {
     text-decoration: none;
 }
 
+.ContainerOverlay {
+    position: fixed;
+    z-index: 9999;
+    top: -90px;
+
+}
+
+.overlay {
+    position: sticky;
+    zoom: 140%;
+    display: flex;
+    margin-right: 10%;
+    
+}
+
 /* header styling */
 
 header {
@@ -86,8 +206,6 @@ header {
     flex-direction: row;
     max-width: 100%;
     border-radius: 25px;
-    background: var(--backround-color);
-    justify-content: space-evenly;
     margin-bottom: 1%;
 }
 
@@ -138,9 +256,10 @@ header {
     margin-bottom: 25px;
     gap: 20px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-auto-flow: row;
     grid-gap: 10px;
+    padding-right: 4%
 }
 
 
@@ -153,30 +272,23 @@ header {
     font-size: 20px;
     display: grid;
 
-    justify-content: center;
     text-align: center;
     margin: 1%;
 }
 
-
 /* body styling */
 
 body {
-    margin: 0 auto;
     max-width: 1200px;
-    background-color: var(--accent-color);
-    color: var(--alert-color);
+    justify-self: center;
+    background-color: #40513B;
 }
+
+
+
 
 /* main styling */
 
-main {
-    max-width: 100%;
-    background-color: var(--backround-color);
-    background-size: auto;
-    border-radius: 25px;
-    padding-bottom: 16px;
-}
 
 
 /* styling call to action */
@@ -186,6 +298,7 @@ main {
     background-color: transparent;
     text-decoration: double;
     text-align: center;
+    padding-right: 4%;
 }
 
 .heroImage {
@@ -194,12 +307,14 @@ main {
     display: flex;
     filter: sepia();
     border-radius: 25px;
+    
 }
 
 /* skill */
 
 .SkillContainer {
     max-width: 100%;
+    padding-right: 4.5%;
 }
 
 .SkillsGrid {
@@ -232,7 +347,7 @@ main {
 /* skill icon zoom */
 
 .SkillPairs:hover {
-    transition: 2s;
+    transition: 0.5s;
     transform: scale(1.2);
     
 
@@ -250,7 +365,7 @@ main {
 }
 
 /* Projects formatting */
-
+/*
 
 .projects {
     gap: 0.5%;
@@ -268,7 +383,7 @@ main {
     max-width: 100%;
     border-radius: 10px;
 }
- 
+ */
 /* project zoom animation*/
 
 .HoverZoom:hover {
@@ -282,6 +397,7 @@ main {
 .contact {
     text-align: center;
     margin: auto;
+    padding-right: 4%;
 }
 
 .emailLink {
@@ -317,12 +433,12 @@ main {
 footer {
     text-align: center;
     padding-top: 2%;
-    background-color: var(--backround-color);
     margin-top: 1%;
     border-radius: 25px;
     max-width: 100%;
     background-size: auto;
     padding-bottom: 10px;
+    padding-right: 4%;
 }
 
 .bottomLogo {
@@ -347,9 +463,6 @@ footer {
         color: var(--alert-color)
     }
 
-    main {
-        background-color: darkslategrey;
-    }
 
     footer {
         background-color: darkslategrey;
@@ -372,9 +485,6 @@ footer {
         background-color: darkgoldenrod;
     }
 
-    main {
-        background-color: darkgoldenrod;
-    }
 
     footer {
         background-color: darkgoldenrod;
